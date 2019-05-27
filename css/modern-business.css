@@ -20,3 +20,59 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 1500px) {
+  .myself {
+    visibility: hidden;
+    display: none;
+  }
+  .storyscreen{
+    margin-top:100px !important;
+  }
+}
+
+
+.scroll{
+  width: 30px;
+  height: 50px;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  margin-top: -25px;
+  margin-left: -15px;
+}
+.scroll .mouse{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border: 2px solid #fe914d;
+  border-radius: 20px;
+}
+.scroll .wheel{
+  width: 4px;
+  height: 4px;
+  top: 10px;
+  left: 50%;
+  position: absolute;
+  background: #fe914d;
+  display: block;
+  border-radius: 50%;
+  margin-left: -2px;
+  animation-name: scroll-wheel;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll-wheel{
+  from{
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+  }
+  to{
+      transform: translate3d(0, 10px, 0);
+      opacity: 0;
+  }
+}
